@@ -1,39 +1,28 @@
-h1 {
-    color: purple;
+html,body{
+    padding: 0;
+    margin: 0;
 }
 
-.paragraph {
-    width: 50%;
-    height: 200px;
-    float: left;
-    padding: 16px;
-    border: 1px purple solid;
-    border-radius: 4px;
-    box-sizing: border-box;
+ul{
+    list-style: none;
+    padding: 1px
 }
-
-#paragraph-1 {
-    background-color: aliceblue;
+.container{
+    display:flex;
+    
+    
 }
-
-#paragraph-2 {
-    background-color: cornsilk;
+.operation-container{
+    width: 10%;
+    background-color: #ffffff;
+    padding: 10px;
 }
-
-#name-label {
-    font-size: 20px;
-    line-height: 24px;
-}
-
-input {
-    margin-bottom: 16px;
-}
-
-#container {
+.farm-selection{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
-
-.paragraph-flex {
-    width: 30%;
+.result-container{
+    width: 90%;
+    background-color: #f4f6f9;
+    height:100vh;
 }
