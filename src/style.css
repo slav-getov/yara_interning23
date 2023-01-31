@@ -59,7 +59,7 @@ input{
     background-color: #f4f6f9;
 }
 #box-logo{
-    background-color: blue;
+    background-image: linear-gradient(to right, blue , white);
     color: #ffffff;
     width: 35px;
     height: 35px;
