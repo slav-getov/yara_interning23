@@ -1,0 +1,9 @@
+question I would like to ask:
+
+do you get a figma file?
+
+how do you handle spacing if you have no specifics?
+
+semantic html? how do you use it?
+
+do you value layout or function more in this assigment?

@@ -27,6 +27,7 @@ select{
 table{
     border-spacing: 0;
 }
+
 tr:nth-child(odd){
     font-weight: bold;
 }
@@ -34,12 +35,20 @@ tr:nth-child(odd){
 tr:nth-child(even){
     
     background-color: #f4f6f9;
-    
       
 }
 
-tr:nth-child(even) > td{
-    padding: 20px 0;
+td > span {
+    background-color: #2f7549;
+    padding: 5px;
+    border-radius: 3px;
+    color: #ffffff;
+    font-weight: semi-bold;
+}
+
+td{
+    padding: 10px;
+    
 }
 
 
@@ -86,9 +95,14 @@ tr:nth-child(even) > td{
     padding: 3px;
     
 }
+
 .farm-options > div > div > i{
     padding-top: 2px;
 }
+.fa-caret-down{
+    padding: 5px;
+}
+
 .operation-container{
     
     width: 10%;
