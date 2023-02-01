@@ -2,24 +2,93 @@
 <html>
 <head>
 <title>Slide 2</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+
 </head>
 
 <body>
-    <div class="container">
+    <nav class="container">
         <div class="operation-container">
-            <h2>Atfarm</h2>
-            <div class="farm-selection">
-                <p>Current farm</p>
-                <p>Farm 01</p>
+            <div class="logo">
+                <div id="box-logo">at</div>
+                <h3>Atfarm</h3>
             </div>
-            <ul>
-                <li>Fields</li>
-                <li>Nutrition Plan</li>
-                <li>Farm settings</li>
-            </ul>
+            <div class="farm-selection">
+                <div>
+                    <i class="fa-solid fa-tractor"></i>
+                </div>
+                
+                <div>
+                    <div class="farm-label">Current farm</div>
+                    <div id="farm-title">Farm 01</div>
+                </div>
+                
+            </div>
+            <div class="farm-options">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div>
+                        <a>Fields</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-carrot"></i>
+                    </div>
+                    <div>
+                        <a>Nutrition Plan</a>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <div>
+                        <a>Farm settings</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="result-container">test</div>
-    </div>
+        <main class="result-container">
+            <div><a href="#">Farm 01</a> > Nutrition Plan Overview</div>
+            <header class="information-header">
+                <h2>Nutrition Plan overview</h2>
+                <p>An overview of crop nutrition plans and recommended products across your farm</p>
+            </header>
+            <form>
+                <div class="tab-titles">
+                    <label for="plans">Plans</label>
+                    <label for="products" class="tab-option">Products</label>
+                    
+                    <!--<input type="radio" name="tab" id="one" checked="checked">
+                    <p>First tab info</p>
+                    <input type="radio" name="tab" id="two">
+                    <p>Second tab info</p>-->
+                </div>
+                <h3>Search</h3>
+                <div class="search-section">
+                    <div id="search-field">
+                        <input type="text" value="" class="search-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="search-params">
+                        <span>Sort by edit date:</span>
+                        <select>
+                            <option>Ascending</option>
+                            <option>Descending</option>
+                        </select>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+            </form>
+        </main>
+    </nav>
     
 </body>
 
