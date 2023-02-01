@@ -17,6 +17,15 @@ input{
 i{
     padding-top: 8px;
 }
+
+form{
+    padding: 20px;
+    
+}
+.tab-titles{
+    border-bottom:3px solid #2f7549;
+    padding: 9px;
+}
 .container{
     display:flex;
     
@@ -75,7 +84,10 @@ i{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 0;
+    margin: 7px 0 5px 0;
+}
+.information-header > h2{
+    margin-bottom: 0;
 }
 .tab-option{
     padding: 10px;
