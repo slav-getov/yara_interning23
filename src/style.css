@@ -24,6 +24,16 @@ select{
     color:blue;
 }
 
+tr:nth-child(even){
+    background-color: #f4f6f9;
+}
+.card{
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
 .search-input{
  width:90%;
  height: 40px;
@@ -31,9 +41,7 @@ select{
  outline:none;
  
 }
-.search-params{
-    text-align: center;
-}
+ 
 .tab-titles{
     border-bottom:3px solid #2f7549;
     padding: 9px;
@@ -116,6 +124,9 @@ select{
     align-items: center;
     
 }
+.card-title{
+    display: flex;
+}
 #box-logo{
     background-image: linear-gradient(to right, blue , white);
     color: #ffffff;
@@ -131,6 +142,6 @@ select{
 }
 #search-field{
     background-color: #ffffff;
-    width: 80%;
+    width: 85%;
     border: 1px solid blue;
 }
