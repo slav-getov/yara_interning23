@@ -1,141 +1,132 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Slide 2</title>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <head>
+        <title>Slide 2</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
+    </head>
 
-</head>
+    <body>
+        <nav class="container">
+            <div class="operation-container">
+                <div class="logo">
+                    <div id="box-logo">at</div>
+                    <h3>Atfarm</h3>
+                </div>
+                <div class="farm-selection">
+                    <div>
+                        <i class="fa-solid fa-tractor"></i>
+                    </div>
 
-<body>
-    <nav class="container">
-        <div class="operation-container">
-            <div class="logo">
-                <div id="box-logo">at</div>
-                <h3>Atfarm</h3>
-            </div>
-            <div class="farm-selection">
-                <div>
-                    <i class="fa-solid fa-tractor"></i>
-                </div>
-                
-                <div>
-                    <div class="farm-label">Current farm</div>
-                    <div id="farm-title">Farm 01</div>
-                </div>
-                
-            </div>
-            <div class="farm-options">
-                <div>
                     <div>
-                        <i class="fa-solid fa-sun"></i>
-                    </div>
-                    <div>
-                        <a>Fields</a>
+                        <div class="farm-label">Current farm</div>
+                        <div id="farm-title">Farm 01</div>
                     </div>
                 </div>
-                <div>
+                <div class="farm-options">
                     <div>
-                        <i class="fa-solid fa-carrot"></i>
+                        <div>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <div>
+                            <a>Fields</a>
+                        </div>
                     </div>
                     <div>
-                        <a>Nutrition Plan</a>
+                        <div>
+                            <i class="fa-solid fa-carrot"></i>
+                        </div>
+                        <div>
+                            <a>Nutrition Plan</a>
+                        </div>
                     </div>
-                </div>
-                <div>
                     <div>
-                        <i class="fa-solid fa-gears"></i>
-                    </div>
-                    <div>
-                        <a>Farm settings</a>
+                        <div>
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <div>
+                            <a>Farm settings</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <main class="result-container">
-            <div><a href="#">Farm 01</a> > Nutrition Plan Overview</div>
-            <header class="information-header">
-                <h2>Nutrition Plan overview</h2>
-                <p>An overview of crop nutrition plans and recommended products across your farm</p>
-            </header>
-            <form>
-                <div class="tab-titles">
-                    <label for="plans">Plans</label>
-                    <label for="products" class="tab-option">Products</label>
-                    
-                    <!--<input type="radio" name="tab" id="one" checked="checked">
+            <main class="result-container">
+                <div><a href="#">Farm 01</a> > Nutrition Plan Overview</div>
+                <header class="information-header">
+                    <h2>Nutrition Plan overview</h2>
+                    <p>An overview of crop nutrition plans and recommended products across your farm</p>
+                </header>
+                <form>
+                    <div class="tab-titles">
+                        <label for="plans">Plans</label>
+                        <label for="products" class="tab-option">Products</label>
+
+                        <!--<input type="radio" name="tab" id="one" checked="checked">
                     <p>First tab info</p>
                     <input type="radio" name="tab" id="two">
                     <p>Second tab info</p>-->
-                </div>
-                <h3>Search</h3>
-                <div class="search-section">
-                    <div id="search-field">
-                        <input type="text" value="" class="search-input">
-                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <div class="search-params">
-                        <span>Sort by edit date:</span>
-                        <select>
-                            <option>Ascending</option>
-                            <option>Descending</option>
-                        </select>
+                    <h3>Search</h3>
+                    <div class="search-section">
+                        <div id="search-field">
+                            <input type="text" value="" class="search-input" />
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="search-params">
+                            <span>Sort by edit date:</span>
+                            <select>
+                                <option>Ascending</option>
+                                <option>Descending</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <!--<div class="card-title">-->
-                        <p>Maize 1</p><p>137.3 ha - Maize Grain</p>
-                        <label for="info" class="toggle"><i class="fa-solid fa-caret-down"></i></label>
-                        <input type="checkbox" id="info">
-                    <!--</div>-->
-                    <div class="card-content">
-                        <table>
-                            <tr>
-                                <td>
-                                    <div>Active plan<i class="fa-solid fa-caret-down"></i></div>
-                                </td>
-                                <td>
-                                    <div>Name<i class="fa-solid fa-caret-down"></i></div>
-                                </td>
-                                <td>
-                                    <div>Estimated target yield<i class="fa-solid fa-caret-down"></i></div>
-                                </td>
-                                <td>
-                                    <div>Date<i class="fa-solid fa-caret-down"></i></div>
-                                </td>
-                                <td>
-                                    <div>Created/Edited<i class="fa-solid fa-caret-down"></i></div>
-                                </td>
-                                <td>
-                                    <div>Edited by<i class="fa-solid fa-caret-down"></i></div>
-                                </td>
-                                <td>
-                                    <div>Recommendation by<i class="fa-solid fa-caret-down"></i></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                    <td>Active</td>
-                                    <td>CNP_Farm 01_Maize 1_137.3ha_Maize Grain</td>
-                                    <td>10 t/ha</td>
-                                    <td>29/01/2023</td>
-                                    <td>Maya Krasteva</td>
-                                    <td>Maya Krasteva</td>
-                                    <td>
-                                        <span>Atfarm</span>
-                                    </td>
-                            </tr>
-                        </table>
-                    </div>
-                    
-                </div>
-                
-                
-                
-                
-                
-            </form>
-        </main>
-    </nav>
-    
-</body>
+                    <div class="card">
+                        <details>
+                            <summary>Maize 1 137.3 ha - Maize Grain</summary>
+                            <div class="card-content">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div>Active plan<i class="fa-solid fa-caret-down"></i></div>
+                                        </td>
+                                        <td>
+                                            <div>Name<i class="fa-solid fa-caret-down"></i></div>
+                                        </td>
+                                        <td>
+                                            <div>Estimated target yield<i class="fa-solid fa-caret-down"></i></div>
+                                        </td>
+                                        <td>
+                                            <div>Date<i class="fa-solid fa-caret-down"></i></div>
+                                        </td>
+                                        <td>
+                                            <div>Created/Edited<i class="fa-solid fa-caret-down"></i></div>
+                                        </td>
+                                        <td>
+                                            <div>Edited by<i class="fa-solid fa-caret-down"></i></div>
+                                        </td>
+                                        <td>
+                                            <div>Recommendation by<i class="fa-solid fa-caret-down"></i></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Active</td>
+                                        <td>CNP_Farm 01_Maize 1_137.3ha_Maize Grain</td>
+                                        <td>10 t/ha</td>
+                                        <td>29/01/2023</td>
+                                        <td>Maya Krasteva</td>
+                                        <td>Maya Krasteva</td>
+                                        <td>
+                                            <span>Atfarm</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </details>
+                        
 
+                        
+                    </div>
+                </form>
+            </main>
+        </nav>
+    </body>
 </html>
