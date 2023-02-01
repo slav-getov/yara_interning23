@@ -12,6 +12,11 @@ input{
     position: absolute;
     right: 100%;
 }
+
+
+i{
+    padding-top: 8px;
+}
 .container{
     display:flex;
     
@@ -20,16 +25,29 @@ input{
 .farm-label{
     color:gray;
 }
+.farm-options{
+    display: flex;
+    flex-direction: column;
+    
+}
+.farm-options > div{
+    padding: 5px 0;
+}
 .operation-container{
+    
     width: 10%;
     background-color: #ffffff;
     padding: 10px;
 }
+.operation-container > div{
+    padding: 5px 0;
+}
 .farm-selection{
     display: flex;
-    align-items: left;
-    flex-direction: column;
+    justify-content: space-around;
+    
 }
+
 .result-container{
     padding: 40px;
     width: 90%;
@@ -67,4 +85,7 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#farm-title{
+    font-weight: bold;
 }
