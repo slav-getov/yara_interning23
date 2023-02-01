@@ -22,6 +22,10 @@ form{
     padding: 20px;
     
 }
+
+div > p {
+    display: none;
+}
 .tab-titles{
     border-bottom:3px solid #2f7549;
     padding: 9px;
