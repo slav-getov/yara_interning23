@@ -32,6 +32,16 @@ i{
 }
 .farm-options > div{
     padding: 5px 0;
+    display: flex;
+    align-items: center;
+    margin-left: 13px;
+}
+.farm-options > div > div{
+    padding: 3px;
+    
+}
+.farm-options > div > div > i{
+    padding-top: 2px;
 }
 .operation-container{
     
