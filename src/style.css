@@ -25,6 +25,7 @@ select {
 
 table {
     border-spacing: 0;
+    width: 100%;
 }
 
 tr:nth-child(odd) {
@@ -60,12 +61,9 @@ td {
 }
 input[type="checkbox"]{
     display:none;
-}
+}*/
 
-.card-content{
-    height: 0;
-    visibility: hidden;
-}
+/*
 .card-content input[type="checkbox"]:checked + .card-content{
     height: auto;
     visibility: visible;
