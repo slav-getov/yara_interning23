@@ -7,13 +7,6 @@ ul{
     list-style: none;
     padding: 1px
 }
-
-input{
-    position: absolute;
-    right: 100%;
-}
-
-
 i{
     padding-top: 8px;
 }
@@ -22,10 +15,14 @@ form{
     padding: 20px;
     
 }
-
-div > p {
-    display: none;
+.search-input{
+ width:90%;
+ height: 40px;
+ border:none;
+ outline:none;
+ 
 }
+
 .tab-titles{
     border-bottom:3px solid #2f7549;
     padding: 9px;
@@ -99,8 +96,14 @@ div > p {
     border-top-right-radius: 4px;
     background-color: #2f7549;
 }
-.tab-option:checked{
-    background-color: #f4f6f9;
+.fa-magnifying-glass{
+   margin: 0;
+}
+.search-section{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
 }
 #box-logo{
     background-image: linear-gradient(to right, blue , white);
@@ -114,4 +117,9 @@ div > p {
 }
 #farm-title{
     font-weight: bold;
+}
+#search-field{
+    background-color: #ffffff;
+    width: 80%;
+    border: 1px solid blue;
 }
