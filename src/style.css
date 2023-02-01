@@ -59,6 +59,23 @@ td{
     display: flex;
     flex-direction: column;
 }
+.toggle{
+    display: block;
+    cursor: pointer;
+}
+input[type="checkbox"]{
+    display:none;
+}
+
+.card-content{
+    height: 0;
+    visibility: hidden;
+}
+.card-content input[type="checkbox"]:checked + .card-content{
+    height: auto;
+    visibility: visible;
+}
+
 
 .search-input{
  width:90%;
@@ -67,11 +84,12 @@ td{
  outline:none;
  
 }
- 
+
 .tab-titles{
     border-bottom:3px solid #2f7549;
     padding: 9px;
 }
+
 .container{
     display:flex;
     
