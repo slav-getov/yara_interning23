@@ -28,10 +28,6 @@ table {
     width: 100%;
 }
 
-tr:nth-child(odd) {
-    font-weight: bold;
-}
-
 tr:nth-child(even) {
     background-color: #f4f6f9;
 }
@@ -41,7 +37,7 @@ td > span {
     padding: 5px;
     border-radius: 3px;
     color: #ffffff;
-    font-weight: semi-bold;
+    
 }
 
 td {
@@ -189,4 +185,7 @@ input[type="checkbox"]{
 #plan {
     color: blue;
     font-weight: 100;
+}
+#maize-span{
+    font-weight: bold;
 }
