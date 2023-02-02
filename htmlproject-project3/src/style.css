@@ -7,23 +7,29 @@
 td{
     padding: 10px 5px;
 }
-
-.double-cell{
+.double-info{
     display: flex;
+    flex-direction: column;
+    padding: 0 5px;
 }
-.double{
-    display: block;
+.double-info > span:nth-child(odd){
+    color: gray;
 }
 .color-box{
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     border-radius: 5px;
-    background-color: blue;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to right bottom, blue, lightblue);
+}
+.sub-logo{
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    background-image: linear-gradient(to right bottom, darkorange, orange);
 }
 .logo-box{
     display: flex;
