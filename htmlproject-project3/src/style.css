@@ -4,3 +4,36 @@
     box-sizing: border-box;
 
 }
+
+nav{
+    padding: 10px;
+    width: 15%;
+    
+}
+.color-box{
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: blue;
+    display: inline-block;
+}
+.logo-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+.logo-word{
+    font-size: x-large;
+}
+.navbar-side{
+
+}
+
+.navbar-infosec{
+
+}
+
+.main-map{
+
+}
