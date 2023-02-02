@@ -1,0 +1,4 @@
+to run the project follow the following commands:
+- npm run build
+- npm start
+- load in the browser - http://localhost:8080/
