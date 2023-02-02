@@ -1,25 +1,28 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
-td{
+td {
     padding: 10px 5px;
 }
-.container{
+.small-item {
+    font-size: small;
+}
+
+.container {
     display: flex;
     height: 100vh;
 }
-.double-info{
+.double-info {
     display: flex;
     flex-direction: column;
     padding: 0 5px;
 }
-.double-info > span:nth-child(odd){
+.double-info > span:nth-child(odd) {
     color: gray;
 }
-.color-box{
+.color-box {
     height: 40px;
     width: 40px;
     border-radius: 5px;
@@ -29,50 +32,51 @@ td{
     color: rgb(255, 255, 255);
     background-image: linear-gradient(to right bottom, blue, lightblue);
 }
-.sub-logo{
+.sub-logo {
     height: 30px;
     width: 30px;
     border-radius: 4px;
     background-image: linear-gradient(to right bottom, darkorange, orange);
 }
-.logo-box{
+.logo-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 50%;
 }
-.logo-word{
+.logo-word {
     font-size: x-large;
 }
-.navbar-side{
+.navbar-side {
     padding: 10px;
     width: 15%;
-   
 }
-.fa-solid{
+.fa-solid {
     opacity: 0.6;
     padding: 0 0.5rem;
 }
-.navbar-infosec{
-    border: .5px solid #efeff1;
+.navbar-infosec {
+    border: 0.5px solid #efeff1;
+    border-width: 0 0.5px 0 0.5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 }
-.options{
+.options {
     display: flex;
     flex-direction: column;
     padding: 10px;
     /*what if we tried a table approach here
     display: flex;
     flex-direction: column;*/
-    
 }
-.single-option{
-
+.single-option {
     padding: 10px;
     width: 70%;
     display: flex;
     align-items: center;
-    
 }
-.main-map{
-
+.main-map {
 }
