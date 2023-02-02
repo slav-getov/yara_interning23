@@ -1,39 +1,6 @@
-h1 {
-    color: purple;
-}
-
-.paragraph {
-    width: 50%;
-    height: 200px;
-    float: left;
-    padding: 16px;
-    border: 1px purple solid;
-    border-radius: 4px;
+*{
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-}
 
-#paragraph-1 {
-    background-color: aliceblue;
-}
-
-#paragraph-2 {
-    background-color: cornsilk;
-}
-
-#name-label {
-    font-size: 20px;
-    line-height: 24px;
-}
-
-input {
-    margin-bottom: 16px;
-}
-
-#container {
-    display: flex;
-    justify-content: center;
-}
-
-.paragraph-flex {
-    width: 30%;
 }
