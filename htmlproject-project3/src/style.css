@@ -5,17 +5,16 @@
 
 }
 
-nav{
-    padding: 10px;
-    width: 15%;
-    
-}
 .color-box{
     height: 30px;
     width: 30px;
     border-radius: 5px;
     background-color: blue;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right bottom, blue, lightblue);
 }
 .logo-box{
     display: flex;
@@ -27,7 +26,8 @@ nav{
     font-size: x-large;
 }
 .navbar-side{
-
+    padding: 10px;
+    width: 15%;
 }
 
 .navbar-infosec{
@@ -35,5 +35,9 @@ nav{
 }
 
 .main-map{
+
+}
+
+.single-option{
 
 }
