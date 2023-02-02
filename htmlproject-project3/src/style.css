@@ -7,6 +7,13 @@
 td{
     padding: 10px 5px;
 }
+
+.double-cell{
+    display: flex;
+}
+.double{
+    display: block;
+}
 .color-box{
     height: 30px;
     width: 30px;
@@ -33,11 +40,14 @@ td{
 }
 .fa-solid{
     opacity: 0.6;
+    padding: 0 0.5rem;
 }
 .navbar-infosec{
 
 }
 .options{
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     /*what if we tried a table approach here
     display: flex;
@@ -49,7 +59,7 @@ td{
     padding: 10px;
     width: 70%;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
     
 }
 .main-map{
