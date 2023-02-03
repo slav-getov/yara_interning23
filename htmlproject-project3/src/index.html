@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" />
         <title>Project 3 from html/css lecture</title>
     </head>
 
     <body>
-        <nav>
-            <div class="logo-box"><div class="color-box"></div><span class="logo-word">Atfarm</span></div>
-            <div class="options"></div>
-        </nav>
+        <div class="container">
+            <nav class="navbar-side">
+                <div class="logo-box">
+                    <div class="color-box"><span class="small-logo">at</span></div>
+                    <span class="logo-word">Atfarm</span>
+                </div>
+                <div class="options">
+                    <div class="single-option">
+                        <div class="sub-logo"></div>
+                        <div class="double-info"><span>Current farm</span><span>Farm 01</span></div>
+                    </div>
+                    <div class="single-option"><i class="fa-solid fa-sun"></i>Fields</div>
+                    <div class="single-option"><i class="fa-solid fa-carrot"></i>Nutrition Plan</div>
+                    <div class="single-option"><i class="fa-solid fa-gears"></i>Farm settings</div>
+                    <!-- <table>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-panorama"></i>
+                            </td>
+                            <td><div class="double-cell"><span class="double">One</span> <span class="double">Two</span></div></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-panorama"></i>
+                            </td>
+                            <td>Fields</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-utensils"></i>
+                            </td>
+                            <td>Nutrition Plan</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-gears"></i>
+                            </td>
+                            <td>Farm settings</td>
+                        </tr>
+                    </table> -->
+                </div>
+            </nav>
+            <div class="navbar-infosec">
+                <p class="small-item">
+                    <a href="#" class="small-item">Farm 01</a> > <a href="#">Maize 1</a> > Edit field details
+                </p>
+                <h2>Edit field details</h2>
+                <div class="information-header">
+                    <div><span>Field size</span><span>137.7 ha</span></div>
+                    <div><a href="#">Edit boundaries</a></div>
+                </div>
+                <div class="selection-box">
+                    <label for="crops selection" class="small-item">Crop Class</label>
+                    <select>
+                        <option>Maize</option>
+                        <option>Ragi</option>
+                        <option>Sorghum</option>
+                    </select>
+
+                    <label for="crops type" class="small-item">Crop Type</label>
+
+                    <select>
+                        <option>Fiber</option>
+                        <option>Feed</option>
+                        <option>Harvest</option>
+                    </select>
+                    <p class="small-item">Choose a crop to see what we can recommend</p>
+                    
+                </div>
+                <p><span>2 recommendations are available</span> for your selected crop type based on Yara R&D + field trial for your area.</p>
+            </div>
+        </div>
     </body>
 </html>

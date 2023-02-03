@@ -1,39 +1,116 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+}
+td {
+    padding: 10px 5px;
 }
 
-nav{
+select{
     padding: 10px;
-    width: 15%;
-    
+    appearance: none;
+    border: 1px solid blue;
+
 }
-.color-box{
+select:focus{
+    outline: none;
+}
+.small-item {
+    font-size: small;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+.double-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+}
+.double-info > span:nth-child(odd) {
+    color: gray;
+}
+.color-box {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right bottom, blue, lightblue);
+}
+.sub-logo {
     height: 30px;
     width: 30px;
-    border-radius: 5px;
-    background-color: blue;
-    display: inline-block;
+    border-radius: 4px;
+    background-image: linear-gradient(to right bottom, darkorange, orange);
 }
-.logo-box{
+.logo-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 50%;
 }
-.logo-word{
+.logo-word {
     font-size: x-large;
 }
-.navbar-side{
+.navbar-side {
+    padding: 10px;
+    width: 15%;
+}
+.fa-solid {
+    opacity: 0.6;
+    padding: 0 0.5rem;
+}
+.navbar-infosec {
+    border: 0.5px solid #efeff1;
+    border-width: 0 0.5px 0 0.5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    width: 20%;
+    
 
 }
-
-.navbar-infosec{
-
+.navbar-infosec > select{
+    text-decoration: none;
 }
-
-.main-map{
-
+.options {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /*what if we tried a table approach here
+    display: flex;
+    flex-direction: column;*/
+}
+.single-option {
+    padding: 10px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+.information-header{
+    display: flex;
+    
+}
+.information-header > div{
+    padding: 10px;
+}
+.information-header > div > span {
+    padding: .4rem;
+}
+.selection-box{
+    display: flex;
+    flex-direction: column;
+    
+}
+.selection-box > p {
+    padding: 0.5rem;
+}
+.main-map {
 }
