@@ -73,6 +73,7 @@ select:focus{
     flex-direction: column;
     justify-content: space-around;
     align-items: left;
+    width: 20%;
     
 
 }
@@ -108,6 +109,8 @@ select:focus{
     flex-direction: column;
     
 }
-
+.selection-box > p {
+    padding: 0.5rem;
+}
 .main-map {
 }
