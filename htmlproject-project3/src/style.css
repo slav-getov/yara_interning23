@@ -163,5 +163,8 @@ select:focus{
 .bolded{
     font-weight: bold;
 }
+.centered{
+    text-align: center;
+}
 
 /*font specifics end here */
