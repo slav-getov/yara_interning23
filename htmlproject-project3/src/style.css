@@ -6,6 +6,16 @@
 td {
     padding: 10px 5px;
 }
+
+select{
+    padding: 10px;
+    appearance: none;
+    border: 1px solid blue;
+
+}
+select:focus{
+    outline: none;
+}
 .small-item {
     font-size: small;
 }
@@ -62,9 +72,12 @@ td {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: left;
     
 
+}
+.navbar-infosec > select{
+    text-decoration: none;
 }
 .options {
     display: flex;
@@ -87,5 +100,14 @@ td {
 .information-header > div{
     padding: 10px;
 }
+.information-header > div > span {
+    padding: .4rem;
+}
+.selection-box{
+    display: flex;
+    flex-direction: column;
+    
+}
+
 .main-map {
 }
