@@ -74,7 +74,7 @@ select:focus{
     justify-content: space-around;
     align-items: left;
     width: 20%;
-    
+    padding: 10px;
 
 }
 .navbar-infosec > select{
@@ -84,9 +84,7 @@ select:focus{
     display: flex;
     flex-direction: column;
     padding: 10px;
-    /*what if we tried a table approach here
-    display: flex;
-    flex-direction: column;*/
+    
 }
 .single-option {
     padding: 10px;
@@ -98,9 +96,7 @@ select:focus{
     display: flex;
     
 }
-.information-header > div{
-    padding: 10px;
-}
+
 .information-header > div > span {
     padding: .4rem;
 }
@@ -112,5 +108,8 @@ select:focus{
 .selection-box > p {
     padding: 0.5rem;
 }
-.main-map {
+.form-header{
+    display: flex;
+    font-size: larger;
+    font-weight: bold;
 }
