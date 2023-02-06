@@ -1,4 +1,9 @@
-const buttonElement = document.querySelector('button')
-buttonElement.addEventListener('click', ()=>{
-    console.log('hey')
-})
+// const playerElement = document.querySelector('button');
+// const bodyElement = document.getElementsByTagName('body')
+
+// bodyElement.addEventListener('keydown', (e)=>{
+//     console.log(e)
+// })
+console.log('hey')
+
+
