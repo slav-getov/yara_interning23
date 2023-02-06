@@ -1,9 +1,11 @@
-// const playerElement = document.querySelector('button');
-// const bodyElement = document.getElementsByTagName('body')
+const playerElement = document.querySelector('.player');
 
-// bodyElement.addEventListener('keydown', (e)=>{
-//     console.log(e)
-// })
-console.log('hey')
+
+playerElement.addEventListener('keydown', (e) => {
+    console.log(playerElement.left)
+    playerElement.style.left + 10;
+});
+
+
 
 
