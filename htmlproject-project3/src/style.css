@@ -148,6 +148,12 @@ select:focus{
     color: #fff;
     border: none;
     cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+.cancel-information-button{
+    border: none;
+    background-color: #ffffff;
+    text-align: center;
 }
 /* end of navbar-infosec styling*/
 
