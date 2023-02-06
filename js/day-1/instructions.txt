@@ -1,0 +1,3 @@
+Stuff to remember for eslint:
+
+npm init @eslint/config is the command to start

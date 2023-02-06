@@ -16,9 +16,6 @@ select{
 select:focus{
     outline: none;
 }
-.small-item {
-    font-size: small;
-}
 
 .container {
     display: flex;
@@ -57,24 +54,28 @@ select:focus{
 .logo-word {
     font-size: x-large;
 }
+/*side nav bar styling */
 .navbar-side {
     padding: 10px;
-    width: 15%;
+    width: 13%;
 }
 .fa-solid {
     opacity: 0.6;
     padding: 0 0.5rem;
 }
+/*side nav bar styling ends here*/
+
+/*navbar-infosec styling*/
 .navbar-infosec {
     border: 0.5px solid #efeff1;
     border-width: 0 0.5px 0 0.5px;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 2rem;
     align-items: left;
     width: 20%;
-    
+    padding: 10px;
 
 }
 .navbar-infosec > select{
@@ -84,33 +85,92 @@ select:focus{
     display: flex;
     flex-direction: column;
     padding: 10px;
-    /*what if we tried a table approach here
-    display: flex;
-    flex-direction: column;*/
+    
 }
 .single-option {
     padding: 10px;
     width: 70%;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .information-header{
     display: flex;
     
 }
-.information-header > div{
-    padding: 10px;
-}
+
 .information-header > div > span {
     padding: .4rem;
 }
 .selection-box{
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    margin-bottom: 1rem;
     
 }
 .selection-box > p {
     padding: 0.5rem;
 }
-.main-map {
+.form-header{
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    font-weight: bold;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 1rem;
 }
+.prelim-info{
+    display: flex;
+    
+}
+.prelim-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info-baloon{
+    height: 28px;
+    width: 28px;
+    background-color: lightblue;
+    border-radius: 50%;
+}
+
+.save-information-button{
+    width: 100%;
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    
+    background-color: lightblue;
+    font-weight: bold;
+    font-size: large;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+.cancel-information-button{
+    border: none;
+    background-color: #ffffff;
+    text-align: center;
+}
+/* end of navbar-infosec styling*/
+
+/*font speficis*/
+
+.small-item {
+    font-size: small;
+}
+.grayout{
+    color: gray;
+    text-align: left;
+}
+.bolded{
+    font-weight: bold;
+}
+.centered{
+    text-align: center;
+}
+
+/*font specifics end here */

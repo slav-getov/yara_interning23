@@ -20,32 +20,6 @@
                     <div class="single-option"><i class="fa-solid fa-sun"></i>Fields</div>
                     <div class="single-option"><i class="fa-solid fa-carrot"></i>Nutrition Plan</div>
                     <div class="single-option"><i class="fa-solid fa-gears"></i>Farm settings</div>
-                    <!-- <table>
-                        <tr>
-                            <td>
-                                <i class="fa-solid fa-panorama"></i>
-                            </td>
-                            <td><div class="double-cell"><span class="double">One</span> <span class="double">Two</span></div></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa-solid fa-panorama"></i>
-                            </td>
-                            <td>Fields</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa-solid fa-utensils"></i>
-                            </td>
-                            <td>Nutrition Plan</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fa-solid fa-gears"></i>
-                            </td>
-                            <td>Farm settings</td>
-                        </tr>
-                    </table> -->
                 </div>
             </nav>
             <div class="navbar-infosec">
@@ -53,6 +27,7 @@
                     <a href="#" class="small-item">Farm 01</a> > <a href="#">Maize 1</a> > Edit field details
                 </p>
                 <h2>Edit field details</h2>
+
                 <div class="information-header">
                     <div><span>Field size</span><span>137.7 ha</span></div>
                     <div><a href="#">Edit boundaries</a></div>
@@ -72,10 +47,44 @@
                         <option>Feed</option>
                         <option>Harvest</option>
                     </select>
-                    <p class="small-item">Choose a crop to see what we can recommend</p>
-                    
+                    <p class="small-item grayout">Choose a crop to see what we can recommend</p>
                 </div>
-                <p><span>2 recommendations are available</span> for your selected crop type based on Yara R&D + field trial for your area.</p>
+                <p>
+                    <span class="bolded">2 recommendations are available</span> for your selected crop type based on
+                    Yara R&D + field trial for your area.
+                </p>
+
+                <form >
+                    <div class="form-header">
+                        <div class="prelim-header">
+                            <div class="prelim-info">
+                                <i class="fa-solid fa-chart-line"></i>
+                                <p>Nutrition Plan</p>
+                            </div>
+
+                            <div class="info-baloon">
+                                <i class="fa-solid fa-question"></i>
+                            </div>
+                        </div>
+                        <div class="prelim-header">
+                            <div class="prelim-info">
+                                <i class="fa-solid fa-tractor"></i>
+                                <p>Variable N-Rate Application</p>
+                            </div>
+                            <div class="info-baloon"><i class="fa-solid fa-question"></i></div>
+                        </div>
+                    </div>
+                    <div class="selection-box">
+                        <label for="crops selection" class="small-item">Field name</label>
+                        <select>
+                            <option>Maize 1</option>
+                            <option>Maize 2</option>
+                            <option>Maize 3</option>
+                        </select>
+                    </div>
+                    <button class="save-information-button">Save field</button>
+                    <button class="cancel-information-button">Cancel</button>
+                </form>
             </div>
         </div>
     </body>
