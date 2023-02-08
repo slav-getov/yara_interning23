@@ -1,17 +1,53 @@
+/* style reset */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+/* end of style reset*/
+
+/*main container*/
 .container{
     display: flex;
     justify-content: center;
 }
+/*end of main container*/
 
+/* calculator body and elements*/
 .calculator-body{
-    background-color: gray;
-    margin: 10px;
-    width: 200px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgreen;
+    margin: 0.5rem;
+    width: 30%;
+    padding: 10%;
+   
 
 }
+.calculator-display{
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 80%;
+    color: gray;
+    outline: none;
+    
+    
+}
+.calculator-operations{
+    display: flex;
+}
+.all-digits{
+
+}
+.single-item-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 2px;
+}
+.easy-border-viewer{
+    border: 1px solid black;
+}
+/* end of elements */
