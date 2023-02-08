@@ -1,0 +1,6 @@
+1. Please provide advice on how to properly size inputs? Do we always need box div to control width or what?
+
+2. Advise on monitor differences? (Show your monitor to person grading and percentage difference) 
+Currently both my monitors display at 100% but there is a size diff
+
+3. When it comes to buttons and other ui - do you always use set sizes? And how exactly do you do that?
