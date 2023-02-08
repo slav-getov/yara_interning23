@@ -1,18 +1,12 @@
-console.log('hey');
-function checkBattery(){
 
+/** will show default value of 0 or last operation */
+function showLastOperation(){
+    const calcDisplayElement = document.querySelector('.calculator-display');
+    
 }
 
-function add(){
+[...document.querySelectorAll('.single-item-number')].addEventListener('click', ()=>{
+    console.log('hey')
+})
 
-}
-
-function testButton(){
-    const firstButtonElement = document.querySelector('.single-item-number');
-    console.log(firstButtonElement)
-    firstButtonElement.addEventListener('click', ()=>{
-        console.log('hey i was clicked !');
-    })
-}
-
-testButton();
+showLastOperation();
