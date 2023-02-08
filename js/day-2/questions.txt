@@ -1,0 +1,4 @@
+1. Please provide advice on how to properly size inputs? Do we always need box div to control width or what?
+
+2. Advise on monitor differences? (Show your monitor to person grading and percentage difference)
+
