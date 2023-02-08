@@ -2,3 +2,4 @@
 
 2. Advise on monitor differences? (Show your monitor to person grading and percentage difference)
 
+3. When it comes to buttons and other ui - do you always use set sizes? And how exactly do you do that?

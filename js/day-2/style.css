@@ -39,22 +39,26 @@
 }
 .calculator-display{
     
-    
     outline: none;
-    
+    width: 70%;
+    padding: .4rem;
     
 }
 .calculator-operations{
     display: flex;
+    padding: 10px;
     width: 80%;
 }
-
-.single-item-number{
+.all-digits{
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.single-item-number{
+    
+    padding: 10px 20px;
     border: 1px solid white;
-    border-radius: 2px;
+    background-color: #636363;
+    flex-grow: 1;
+    cursor: pointer;
 }
 .easy-border-viewer{
     border: 1px solid black;

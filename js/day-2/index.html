@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Calculate by pg</title>
-        <script src="./app.js" defer></script>
+        
         <link rel="stylesheet" href="style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,16 +19,18 @@
             <div class="calculator-body calculator-typical-border">
                 <div class="calculator-head calculator-typical-border">
                     <p id="calculator-info">Electronic calculator</p>
-                    hello there display
+                    <input class="calculator-display">
                 </div>
                 <div class="calculator-operations">
                     <div class="easy-border-viewer all-digits">
-                        <button>0</button><button>1</button><button>2</button><button>3</button><button>4</button
-                        ><button>5</button><button>6</button><button>7</button><button>8</button>
+                        <button class="single-item-number calculator-typical-border">0</button>
+                        <button class="single-item-number calculator-typical-border">1</button>
+                        <button class="single-item-number calculator-typical-border">2</button>
                     </div>
                     <div class="easy-border-viewer">Operators go here</div>
                 </div>
             </div>
         </div>
+        <script src="./app.js"></script>
     </body>
 </html>
