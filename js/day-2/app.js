@@ -7,10 +7,9 @@ let lastOperationResultMemory = '';
 //this line tests that the initial display value can be removed
 calculatorDisplayFieldElement.value = '';
 
-//attach an event listener to all buttons
-Array.from(document.querySelectorAll('.single-item-number')).forEach((itemSelected) => {
-    itemSelected.addEventListener('click', (e) => {
-        //trim is necessary since format of prettier adds whitespace before and after
+const calculatorMainframe = document.getElementsByClassName('calculator-operations')[0];
+calculatorMainframe.addEventListener('click', (e)=>{
+    //trim is necessary since format of prettier adds whitespace before and after
 
         if (e.target.innerText == 'C') {
             let currentRawResult = calculatorDisplayFieldElement.value;
@@ -33,8 +32,7 @@ Array.from(document.querySelectorAll('.single-item-number')).forEach((itemSelect
 
         console.log(`value is '${lastOperationResultMemory}'`);
         //calculatorDisplayFieldElement.value += itemSelected.textContent.trim();
-    });
-});
+})
 /** will test whether special operation symbols exist within a specified math expression/combination of digits */
 function testForSpecifiedStringWithinUserInput(valueAsString, reg) {
     return reg.test(valueAsString);
