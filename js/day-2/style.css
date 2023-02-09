@@ -77,6 +77,8 @@
     background-color: red;
     color: #fff;
     border: 1px solid white;
+    font-weight: 600;
+    
 }
 .regular-button-styling{
     border: 1px solid white;
