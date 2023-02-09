@@ -1,3 +1,5 @@
+import regexDictionary from "./regexDict.js";
+console.log(regexDictionary)
 const re = /[\*\/\-\+]/;
 const reMultiple = /[\+\-\/\*]/g;
 const reMultipleExpanded = /([0-9]{1,})([\+\-\/\*]{1})([0-9]{1,})/;
