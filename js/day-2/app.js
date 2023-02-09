@@ -1,6 +1,6 @@
 const re = /[\*\/\-\+]/;
 const reMultiple = /[\+\-\/\*]/g;
-const reMultipleExpanded = /([0-9]{1,})([-]{1})([0-9]{1,})/;
+const reMultipleExpanded = /([0-9]{1,})([\+\-\/\*]{1})([0-9]{1,})/;
 
 const calculatorDisplayFieldElement = document.querySelector('.calculator-display');
 // note to self - don't try to check for inpuit change when changing inpuit via js. wont work. you need custom events
