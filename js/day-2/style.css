@@ -48,24 +48,30 @@
 }
 .calculator-operations{
     /*flex restrics too much - what about display inline-block?*/
-    /*display: flex;*/
+    display: flex;
     padding: 10px;
     width: 80%;
 }
-.calculator-operations > div {
-    display: inline-block;
-}
+
 .all-digits{
     display: flex;
     flex-direction: column;
     
 }
+
+.all-operations{
+    display: flex;
+    flex-direction: column;
+}
 .single-item-number{
+    /* when it comes to 1 and 2 given that they inhabit different space what is the best way to style them?? */
     margin: .2rem;
     padding: 10px 20px;
+    cursor: pointer;
+}
+.regular-button-styling{
     border: 1px solid white;
     background-color: #636363;
-    cursor: pointer;
 }
 .easy-border-viewer{
     border: 1px solid black;
@@ -75,6 +81,11 @@
     color: white;
     font-weight: 400;
     text-transform: uppercase;
+}
+#evaluate-expression-button{
+    background-color: blue;
+    border: 1px solid #fff;
+    color: #fff;
 }
 /* end of body and elements */
 
