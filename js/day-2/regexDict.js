@@ -1,5 +1,5 @@
 const regexDictionary = {
-    "simple math": {
+    "simplemath": {
         "regex": /[\*\/\-\+]/,
         "description": "finds the first plus/minus/divide/multiply in a string"
     }
