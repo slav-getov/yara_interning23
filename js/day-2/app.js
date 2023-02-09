@@ -21,7 +21,7 @@ calculatorMainframe.addEventListener('click', (e) => {
             lastOperationResultMemory = calculatorDisplayFieldElement.value;
             calculatorDisplayFieldElement.value = 'ERR';
             
-        } else {
+        } else if(calculatorDisplayFieldElement.value != 'ERR'){
             calculatorDisplayFieldElement.value += e.target.innerText;
         }
     }
