@@ -47,12 +47,17 @@
     
 }
 .calculator-operations{
-    display: flex;
+    /*flex restrics too much - what about display inline-block?*/
+    /*display: flex;*/
     padding: 10px;
     width: 80%;
 }
+.calculator-operations > div {
+    display: inline-block;
+}
 .all-digits{
     display: flex;
+    flex-direction: column;
     
 }
 .single-item-number{
