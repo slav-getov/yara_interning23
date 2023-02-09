@@ -1,5 +1,6 @@
 const re = /[\*\/\-\+]/;
 const reMultiple = /[\+\-\/\*]/g;
+const reMultipleExpanded = /([0-9]{1,})([-]{1})([0-9]{1,})/;
 
 const calculatorDisplayFieldElement = document.querySelector('.calculator-display');
 // note to self - don't try to check for inpuit change when changing inpuit via js. wont work. you need custom events
@@ -16,12 +17,10 @@ calculatorMainframe.addEventListener('click', (e) => {
     } else if (e.target.innerText == '=') {
         console.log(utilizeEquals(calculatorDisplayFieldElement.value));
     } else {
-        if (calculatorDisplayFieldElement.value.length == 8) {
-            
+        if (calculatorDisplayFieldElement.value.length == 8 && re.test(calculatorDisplayFieldElement.value)) {
             lastOperationResultMemory = calculatorDisplayFieldElement.value;
             calculatorDisplayFieldElement.value = 'ERR';
-            
-        } else if(calculatorDisplayFieldElement.value != 'ERR'){
+        } else if (calculatorDisplayFieldElement.value != 'ERR') {
             calculatorDisplayFieldElement.value += e.target.innerText;
         }
     }
@@ -60,5 +59,11 @@ function utilizeCButton() {
 }
 
 function utilizeEquals(stringInput) {
-    return testForMultipleSpecialChars(stringInput, reMultiple);
+    const [fullexp, ...rest] = testForMultipleSpecialChars(stringInput, reMultipleExpanded);
+    console.log(rest);
+    return performSimpleMath(rest[0], rest[1], rest[2]);
+}
+
+function performSimpleMath(firstItem, operation, secondItem) {
+    return `${parseInt(firstItem)} ${operation} ${parseInt(secondItem)}`;
 }
