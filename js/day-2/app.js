@@ -19,14 +19,14 @@ calculatorMainframe.addEventListener('click', (e) => {
     }
 
     console.log(`value is '${lastOperationResultMemory}'`);
-    
+
     //calculatorDisplayFieldElement.value += itemSelected.textContent.trim();
 });
 /** will test whether special operation symbols exist within a specified math expression/combination of digits. */
 function testForSpecifiedStringWithinUserInput(valueAsString, reg) {
-    return valueAsString.match(reg);
+    //return valueAsString.match(reg);
+    return reg.test(valueAsString);
 }
-
 
 /** will clear both display and internal memory. */
 function utilizeACButton() {
@@ -37,20 +37,14 @@ function utilizeACButton() {
 /** will clear display in steps. First clear will remove unfinished expressions. Second clear will zero-out. */
 function utilizeCButton() {
     let currentRawResult = calculatorDisplayFieldElement.value;
-    console.log(testForSpecifiedStringWithinUserInput(currentRawResult, re) + 'these are the macthes')
-    console.log(lastOperationResultMemory);
-    if ([testForSpecifiedStringWithinUserInput(currentRawResult, re)].length == 1) {
-        console.log('executed and found');
+
+    if (testForSpecifiedStringWithinUserInput(currentRawResult, re)) {
         currentRawResult = currentRawResult.replace(re, '');
         lastOperationResultMemory += currentRawResult;
-        // fix testFor...>!!!!
-    } else{
-        console.log('executed and not found');
+    } else {
         currentRawResult = '0';
         lastOperationResultMemory = '0';
     }
 
-    //lastOperationResultMemory += currentRawResult;
-    console.log('very end of func' + currentRawResult)
     calculatorDisplayFieldElement.value = currentRawResult;
 }
