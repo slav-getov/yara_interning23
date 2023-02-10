@@ -103,5 +103,5 @@ function performSimpleMath(firstItem, operation, secondItem) {
         memory = 0;
     }
    
-    return result;
+    return Number.isInteger(result) ? result : result.toFixed(2);
 }
