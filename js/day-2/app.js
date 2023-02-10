@@ -9,7 +9,7 @@ const calculatorDisplayFieldElement = document.querySelector('.calculator-displa
 // note to self - don't try to check for inpuit change when changing inpuit via js. wont work. you need custom events
 calculatorDisplayFieldElement.placeholder = '0';
 
-let lastOperationResultMemory = '';
+let memory = '';
 
 const calculatorMainframe = document.getElementsByClassName('calculator-operations')[0];
 calculatorMainframe.addEventListener('click', (e) => {
@@ -21,14 +21,14 @@ calculatorMainframe.addEventListener('click', (e) => {
         console.log(utilizeEquals(calculatorDisplayFieldElement.value));
     } else {
         if (calculatorDisplayFieldElement.value.length == 8 && re.test(calculatorDisplayFieldElement.value)) {
-            lastOperationResultMemory = calculatorDisplayFieldElement.value;
+            memory = calculatorDisplayFieldElement.value;
             calculatorDisplayFieldElement.value = 'ERR';
         } else if (calculatorDisplayFieldElement.value != 'ERR') {
             calculatorDisplayFieldElement.value += e.target.innerText;
         }
     }
 
-    console.log(`value is '${lastOperationResultMemory}'`);
+    console.log(`value is '${memory}'`);
 });
 /** will test whether special operation symbols exist within a specified math expression/combination of digits. */
 function testForSpecifiedStringWithinUserInput(valueAsString, reg) {
@@ -42,7 +42,7 @@ function testForMultipleSpecialChars(valueAsString, reg) {
 
 /** will clear both display and internal memory. */
 function utilizeACButton() {
-    lastOperationResultMemory = '';
+    memory = '';
     calculatorDisplayFieldElement.value = '';
 }
 
@@ -52,10 +52,10 @@ function utilizeCButton() {
 
     if (testForSpecifiedStringWithinUserInput(currentRawResult, re)) {
         currentRawResult = currentRawResult.replace(re, '');
-        lastOperationResultMemory += currentRawResult;
+        memory += currentRawResult;
     } else {
         currentRawResult = '';
-        lastOperationResultMemory = '';
+        memory = '';
     }
 
     calculatorDisplayFieldElement.value = currentRawResult;
