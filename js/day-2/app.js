@@ -1,15 +1,14 @@
-import regexDictionary from "./regexDict.js";
+import regexDictionary from './regexDict.js';
 
 const re = regexDictionary.simplemath.regex;
-console.log(re)
-const reMultiple = /[\+\-\/\*]/g;
-const reMultipleExpanded = /([0-9]{1,})([\+\-\/\*]{1})([0-9]{1,})/;
+const reMultiple = regexDictionary.simplemathmultiple.regex;
+const reMultipleExpanded = regexDictionary.capturegroupsyntax.regex;
 
 const calculatorDisplayFieldElement = document.querySelector('.calculator-display');
 // note to self - don't try to check for inpuit change when changing inpuit via js. wont work. you need custom events
 calculatorDisplayFieldElement.placeholder = '0';
 
-let lastOperationResultMemory = '';
+let memory = '';
 
 const calculatorMainframe = document.getElementsByClassName('calculator-operations')[0];
 calculatorMainframe.addEventListener('click', (e) => {
@@ -20,15 +19,18 @@ calculatorMainframe.addEventListener('click', (e) => {
     } else if (e.target.innerText == '=') {
         console.log(utilizeEquals(calculatorDisplayFieldElement.value));
     } else {
-        if (calculatorDisplayFieldElement.value.length == 8 && re.test(calculatorDisplayFieldElement.value)) {
-            lastOperationResultMemory = calculatorDisplayFieldElement.value;
+        //??calculatorDisplayFieldElement.value.length == 8 && re.test(calculatorDisplayFieldElement.value)
+        if (calculatorDisplayFieldElement.value.length == 8) {
+            //threshold
+            memory = calculatorDisplayFieldElement.value;
             calculatorDisplayFieldElement.value = 'ERR';
         } else if (calculatorDisplayFieldElement.value != 'ERR') {
+            //free enter
             calculatorDisplayFieldElement.value += e.target.innerText;
         }
     }
 
-    console.log(`value is '${lastOperationResultMemory}'`);
+    console.log(`value is '${memory}'`);
 });
 /** will test whether special operation symbols exist within a specified math expression/combination of digits. */
 function testForSpecifiedStringWithinUserInput(valueAsString, reg) {
@@ -40,9 +42,9 @@ function testForMultipleSpecialChars(valueAsString, reg) {
     return match;
 }
 
-/** will clear both display and internal memory. */
+/** will clear both display and memory. */
 function utilizeACButton() {
-    lastOperationResultMemory = '';
+    memory = '';
     calculatorDisplayFieldElement.value = '';
 }
 
@@ -50,12 +52,12 @@ function utilizeACButton() {
 function utilizeCButton() {
     let currentRawResult = calculatorDisplayFieldElement.value;
 
-    if (testForSpecifiedStringWithinUserInput(currentRawResult, re)) {
-        currentRawResult = currentRawResult.replace(re, '');
-        lastOperationResultMemory += currentRawResult;
+    if (testForSpecifiedStringWithinUserInput(currentRawResult, reMultiple)) {
+        currentRawResult = currentRawResult.replaceAll(reMultiple, '');
+        memory += currentRawResult;
     } else {
         currentRawResult = '';
-        lastOperationResultMemory = '';
+        memory = '';
     }
 
     calculatorDisplayFieldElement.value = currentRawResult;
@@ -68,5 +70,33 @@ function utilizeEquals(stringInput) {
 }
 
 function performSimpleMath(firstItem, operation, secondItem) {
-    return `${parseInt(firstItem)} ${operation} ${parseInt(secondItem)}`;
+    //return `${parseInt(firstItem)} ${operation} ${parseInt(secondItem)}`;
+    let result = 0;
+    let operator = parseInt(firstItem);
+    let operand = parseInt(secondItem);
+    switch (operation) {
+        case '+':
+            result = operator + operand;
+            break;
+        case '-':
+            result = operator - operand;
+            break;
+        case '*':
+            result = operator * operand;
+            break;
+        case '/':
+            if(operand == 0){
+                result = 'Can not divide by zero';
+            }else{
+                result = operator / operand;
+            }
+        default:
+            break;
+    }
+    //save results!!!
+    if(typeof result != 'string'){
+        memory = result;
+    }
+   
+    return result;
 }
