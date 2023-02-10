@@ -93,6 +93,10 @@ function performSimpleMath(firstItem, operation, secondItem) {
         default:
             break;
     }
-
+    //save results!!!
+    if(typeof result != 'string'){
+        memory = result;
+    }
+   
     return result;
 }
