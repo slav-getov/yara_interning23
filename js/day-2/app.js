@@ -26,6 +26,7 @@ calculatorMainframe.addEventListener('click', (e) => {
             precisionToken++;
         }else {
             //??calculatorDisplayFieldElement.value.length == 8 && re.test(calculatorDisplayFieldElement.value)
+            console.log(calculatorDisplayFieldElement.value.length)
             if (calculatorDisplayFieldElement.value.length == 8) {
                 //threshold
                 memory = calculatorDisplayFieldElement.value;
@@ -93,7 +94,7 @@ function performSimpleMath(firstItem, operation, secondItem) {
             break;
         case '/':
             if(operand == 0){
-                result = 'Can not divide by zero';
+                result = 'Cannot divide by zero';
             }else{
                 result = operator / operand;
             }
