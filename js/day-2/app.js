@@ -9,24 +9,32 @@ const calculatorDisplayFieldElement = document.querySelector('.calculator-displa
 calculatorDisplayFieldElement.placeholder = '0';
 
 let memory = '';
+let precisionToken = 0;
 
 const calculatorMainframe = document.getElementsByClassName('calculator-operations')[0];
 calculatorMainframe.addEventListener('click', (e) => {
-    if (e.target.innerText == 'C') {
-        utilizeCButton();
-    } else if (e.target.innerText == 'AC') {
-        utilizeACButton();
-    } else if (e.target.innerText == '=') {
-        console.log(utilizeEquals(calculatorDisplayFieldElement.value));
-    } else {
-        //??calculatorDisplayFieldElement.value.length == 8 && re.test(calculatorDisplayFieldElement.value)
-        if (calculatorDisplayFieldElement.value.length == 8) {
-            //threshold
-            memory = calculatorDisplayFieldElement.value;
-            calculatorDisplayFieldElement.value = 'ERR';
-        } else if (calculatorDisplayFieldElement.value != 'ERR') {
-            //free enter
-            calculatorDisplayFieldElement.value += e.target.innerText;
+    if(e.target.matches("button.single-item")){
+        if (e.target.innerText == 'C') {
+            utilizeCButton();
+        } else if (e.target.innerText == 'AC') {
+            utilizeACButton();
+        } else if (e.target.innerText == '=') {
+            performComplexMath(calculatorDisplayFieldElement.value)
+            console.log(precisionToken)
+            utilizeEquals(calculatorDisplayFieldElement.value);
+        } else if(e.target.innerText == 'Prc'){
+            precisionToken++;
+        }else {
+            //??calculatorDisplayFieldElement.value.length == 8 && re.test(calculatorDisplayFieldElement.value)
+            console.log(calculatorDisplayFieldElement.value.length)
+            if (calculatorDisplayFieldElement.value.length == 8) {
+                //threshold
+                memory = calculatorDisplayFieldElement.value;
+                calculatorDisplayFieldElement.value = 'ERR';
+            } else if (calculatorDisplayFieldElement.value != 'ERR') {
+                //free enter
+                calculatorDisplayFieldElement.value += e.target.innerText;
+            }
         }
     }
 
@@ -45,6 +53,7 @@ function testForMultipleSpecialChars(valueAsString, reg) {
 /** will clear both display and memory. */
 function utilizeACButton() {
     memory = '';
+    precisionToken = 0;
     calculatorDisplayFieldElement.value = '';
 }
 
@@ -62,15 +71,14 @@ function utilizeCButton() {
 
     calculatorDisplayFieldElement.value = currentRawResult;
 }
-
+/** will activate equals and perform simple math */
 function utilizeEquals(stringInput) {
     const [fullexp, ...rest] = testForMultipleSpecialChars(stringInput, reMultipleExpanded);
-    console.log(rest);
-    return performSimpleMath(rest[0], rest[1], rest[2]);
+    //return performSimpleMath(rest[0], rest[1], rest[2]);
+    calculatorDisplayFieldElement.value = performSimpleMath(rest[0], rest[1], rest[2]);
 }
-
+/** will perform basic math and capture div by zero */
 function performSimpleMath(firstItem, operation, secondItem) {
-    //return `${parseInt(firstItem)} ${operation} ${parseInt(secondItem)}`;
     let result = 0;
     let operator = parseInt(firstItem);
     let operand = parseInt(secondItem);
@@ -86,17 +94,55 @@ function performSimpleMath(firstItem, operation, secondItem) {
             break;
         case '/':
             if(operand == 0){
-                result = 'Can not divide by zero';
+                result = 'Cannot divide by zero';
             }else{
                 result = operator / operand;
             }
         default:
             break;
     }
+    console.log(result)
     //save results!!!
     if(typeof result != 'string'){
         memory = result;
+    }else{
+        //is this a good idea?
+        memory = 0;
+        return result;
     }
-   
-    return result;
+    	
+    return Number.isInteger(result) ? result : result.toFixed(precisionToken);
+}
+
+/** will perform complex math */
+function performComplexMath(expression){
+    let complexExpressionUnevalAsArr = expression.split('');
+    // split so we can find all items
+    
+    //best index will be a complex operation sign
+    let bestIndex = 0;
+    //loop over and find best index
+    for(let i =0;i<complexExpressionUnevalAsArr.length;i++){
+        if(complexExpressionUnevalAsArr[i] == '*' || '/'){
+            bestIndex = complexExpressionUnevalAsArr[i];
+            break;
+        }
+    }
+    let result = 0;
+    switch (complexExpressionUnevalAsArr[bestIndex]) {
+        case '+':
+            result = parseInt(complexExpressionUnevalAsArr[bestIndex-1]+complexExpressionUnevalAsArr[bestIndex+1]);
+            break;
+        case '-':
+            result = parseInt(complexExpressionUnevalAsArr[bestIndex-1]-complexExpressionUnevalAsArr[bestIndex+1]);
+            break;
+        case '/':
+            result = parseInt(complexExpressionUnevalAsArr[bestIndex-1]/complexExpressionUnevalAsArr[bestIndex+1]);
+            break;
+        case '*':
+            result = parseInt(complexExpressionUnevalAsArr[bestIndex-1]*complexExpressionUnevalAsArr[bestIndex+1]);
+            break;
+        default:
+            break;
+    }
 }
