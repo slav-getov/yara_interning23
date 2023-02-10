@@ -18,7 +18,7 @@
 .calculator-body{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     background-color: #7a7977;
     
     margin: 0.5rem;
@@ -48,6 +48,7 @@
 .calculator-operations{
     /*flex restrics too much - what about display inline-block?*/
     display: flex;
+    
     padding: 10px;
     width: 80%;
 }
