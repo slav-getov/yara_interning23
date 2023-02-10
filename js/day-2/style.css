@@ -67,11 +67,18 @@
     display: flex;
     flex-direction: column;
 }
-.single-item-number{
+.single-item{
     /* when it comes to 1 and 2 given that they inhabit different space what is the best way to style them?? */
     margin: .2rem;
     padding: 10px 20px;
     cursor: pointer;
+}
+.single-item:hover{
+    box-shadow: 0 10px 20px rgb(0,0,0,.4);
+}
+.single-item:active{
+    transform: translateY(+1px);
+    box-shadow: 0 5px 10px rgb(0,0,0,.6);
 }
 .single-special-operation{
     background-color: red;

@@ -17,7 +17,8 @@ calculatorMainframe.addEventListener('click', (e) => {
     } else if (e.target.innerText == 'AC') {
         utilizeACButton();
     } else if (e.target.innerText == '=') {
-        console.log(utilizeEquals(calculatorDisplayFieldElement.value));
+        //console.log(utilizeEquals(calculatorDisplayFieldElement.value));
+        utilizeEquals(calculatorDisplayFieldElement.value);
     } else {
         //??calculatorDisplayFieldElement.value.length == 8 && re.test(calculatorDisplayFieldElement.value)
         if (calculatorDisplayFieldElement.value.length == 8) {
@@ -66,7 +67,8 @@ function utilizeCButton() {
 function utilizeEquals(stringInput) {
     const [fullexp, ...rest] = testForMultipleSpecialChars(stringInput, reMultipleExpanded);
     console.log(rest);
-    return performSimpleMath(rest[0], rest[1], rest[2]);
+    //return performSimpleMath(rest[0], rest[1], rest[2]);
+    calculatorDisplayFieldElement.value = performSimpleMath(rest[0], rest[1], rest[2]);
 }
 
 function performSimpleMath(firstItem, operation, secondItem) {
@@ -96,6 +98,9 @@ function performSimpleMath(firstItem, operation, secondItem) {
     //save results!!!
     if(typeof result != 'string'){
         memory = result;
+    }else{
+        //is this a good idea?
+        memory = 0;
     }
    
     return result;
