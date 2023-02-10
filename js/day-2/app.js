@@ -100,14 +100,16 @@ function performSimpleMath(firstItem, operation, secondItem) {
         default:
             break;
     }
+    console.log(result)
     //save results!!!
     if(typeof result != 'string'){
         memory = result;
     }else{
         //is this a good idea?
         memory = 0;
+        return result;
     }
-   
+    	
     return Number.isInteger(result) ? result : result.toFixed(precisionToken);
 }
 
@@ -125,7 +127,21 @@ function performComplexMath(expression){
             break;
         }
     }
-
-
-
+    let result = 0;
+    switch (complexExpressionUnevalAsArr[bestIndex]) {
+        case '+':
+            result = parseInt(complexExpressionUnevalAsArr[bestIndex-1]+complexExpressionUnevalAsArr[bestIndex+1]);
+            break;
+        case '-':
+            result = parseInt(complexExpressionUnevalAsArr[bestIndex-1]-complexExpressionUnevalAsArr[bestIndex+1]);
+            break;
+        case '/':
+            result = parseInt(complexExpressionUnevalAsArr[bestIndex-1]/complexExpressionUnevalAsArr[bestIndex+1]);
+            break;
+        case '*':
+            result = parseInt(complexExpressionUnevalAsArr[bestIndex-1]*complexExpressionUnevalAsArr[bestIndex+1]);
+            break;
+        default:
+            break;
+    }
 }
