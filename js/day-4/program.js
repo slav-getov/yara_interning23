@@ -33,26 +33,26 @@ function checkUsersValid(goodUsers){
     }
 }
 
-var goodUsers = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 }
-  ]
+// var goodUsers = [
+//     { id: 1 },
+//     { id: 2 },
+//     { id: 3 }
+//   ]
 
-  // `checkUsersValid` is the function you'll define
-  var testAllValid = checkUsersValid(goodUsers)
+//   // `checkUsersValid` is the function you'll define
+//   var testAllValid = checkUsersValid(goodUsers)
 
-  console.log(testAllValid([
-    { id: 2 },
-    { id: 1 }
-  ]))
-  // => true
+//   console.log(testAllValid([
+//     { id: 2 },
+//     { id: 1 }
+//   ]))
+//   // => true
 
-  console.log(testAllValid([
-    { id: 2 },
-    { id: 4 },
-    { id: 1 }
-  ]))
+//   console.log(testAllValid([
+//     { id: 2 },
+//     { id: 4 },
+//     { id: 1 }
+//   ]))
 
 
 
@@ -61,8 +61,30 @@ function checkUsersValid(goodUsers) {
         return submittedUsers.every(goodUser=>goodUsers.some(submittedUser=>goodUser.id === submittedUser.id))
     };
 }
+
+function countWords(stringsAsArr){
+    let stringsAsArrCopy = stringsAsArr.slice()
+    return stringsAsArrCopy.reduce((acc, currItem)=>{
+        let currCount = acc.hasOwnProperty(currItem) ? acc[currItem] : 0;
+        console.log(currCount)
+        return {
+            ...acc,
+            [currItem]: currCount+1
+        }
+        
+    },{})
+}
+
+function duckCount(...args){
+    return [...args.filter(obj=>Object.prototype.hasOwnProperty.call(obj,'quack'))].length
+}
+// var notDuck = Object.create({quack: true})
+// var duck = {quack: true}
+// console.log(duckCount(duck, notDuck)) // 1
 module.exports = upperCaser
 module.exports = repeat
 module.exports = doubleAll
 module.exports = getShortMessage
 module.exports = checkUsersValid
+module.exports = countWords
+module.exports = duckCount
