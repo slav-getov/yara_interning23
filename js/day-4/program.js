@@ -78,6 +78,26 @@ function countWords(stringsAsArr){
 function duckCount(...args){
     return [...args.filter(obj=>Object.prototype.hasOwnProperty.call(obj,'quack'))].length
 }
+
+function logger(namespace){
+    return function append(){
+
+    }
+}
+
+function map(arr,fn){
+    let copyArr = arr.slice()
+    let result = copyArr.reduce((acc,currValue)=>{
+        let initialResult = fn(currValue)
+        acc.push(initialResult)
+        return acc
+    }, [])
+
+    return result
+
+}
+
+
 // var notDuck = Object.create({quack: true})
 // var duck = {quack: true}
 // console.log(duckCount(duck, notDuck)) // 1
@@ -88,3 +108,5 @@ module.exports = getShortMessage
 module.exports = checkUsersValid
 module.exports = countWords
 module.exports = duckCount
+module.exports = logger
+module.exports = map
