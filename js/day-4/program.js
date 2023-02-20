@@ -110,8 +110,22 @@ function trampoline(fn) {
     }
 }
 
-function curryN(fn, n) {
-    
+function curryN(fn, n) {}
+
+function Spy(target, method) {
+    //lets have a reference 
+    const originalFunction = target[method]
+    const invocations = {
+        count: 0
+    }
+
+    target[method] = function() {
+        invocations.count++
+        return originalFunction.apply(this, arguments)
+    }
+
+    return invocations
+
 }
 
 module.exports = function (operation, num) {
@@ -135,3 +149,4 @@ module.exports = duckCount;
 module.exports = logger;
 module.exports = map;
 module.exports = curryN;
+module.exports = Spy;
